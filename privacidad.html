@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidad — EngramAD</title>
+<meta name="description" content="Cómo EngramAD recopila, usa y protege tus datos personales.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --space:#04050d;
+  --space-2:#080a18;
+  --navy:#1d2a5e;
+  --navy-bright:#3a4fb5;
+  --purple:#7b2fbe;
+  --purple-bright:#9d4dff;
+  --magenta:#d61f5c;
+  --magenta-bright:#ff3d7f;
+  --red:#e0263d;
+  --ink:#f2f1f7;
+  --ink-dim:rgba(242,241,247,.55);
+  --ink-faint:rgba(242,241,247,.32);
+  --line:rgba(157,77,255,.14);
+  --font-display:'Syne',sans-serif;
+  --font-body:'Instrument Sans',sans-serif;
+  --font-mono:'IBM Plex Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+html,body{background:var(--space);color:var(--ink);overflow-x:hidden}
+body{font-family:var(--font-body);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+::selection{background:rgba(214,31,92,.45);color:#fff}
+
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:22px 4vw;
+  background:linear-gradient(to bottom,rgba(4,5,13,.85),transparent);
+  backdrop-filter:blur(2px);
+}
+.brand{
+  display:flex;align-items:center;gap:10px;
+  text-decoration:none;color:var(--ink);
+  font-family:var(--font-display);font-weight:800;font-size:18px;letter-spacing:.04em;
+}
+.brand .grad{
+  background:linear-gradient(100deg,var(--purple-bright),var(--magenta-bright));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.nav-back{
+  font-family:var(--font-mono);font-size:12px;
+  letter-spacing:.08em;color:var(--ink-dim);text-decoration:none;
+  border:1px solid var(--line);border-radius:999px;
+  padding:9px 20px;transition:.35s;
+}
+.nav-back:hover{
+  color:var(--ink);border-color:rgba(255,61,127,.6);
+  box-shadow:0 0 24px rgba(214,31,92,.25);
+}
+
+/* MAIN */
+main{
+  max-width:740px;
+  margin:0 auto;
+  padding:120px 24px 80px;
+}
+
+/* HEADER */
+.page-label{
+  font-family:var(--font-mono);font-size:11px;letter-spacing:.15em;
+  color:var(--purple-bright);text-transform:uppercase;margin-bottom:12px;
+}
+.page-title{
+  font-family:var(--font-display);font-size:clamp(28px,5vw,42px);
+  font-weight:800;letter-spacing:-.03em;line-height:1.1;
+  color:var(--ink);margin-bottom:20px;
+}
+.page-subtitle{
+  font-size:15px;color:var(--ink-dim);line-height:1.7;
+  max-width:600px;
+}
+.page-subtitle strong{color:var(--ink);}
+.divider{
+  margin:40px 0;
+  border:none;border-top:1px solid var(--line);
+}
+
+/* SECTIONS */
+.section{margin-bottom:44px;}
+.section-title{
+  font-family:var(--font-display);font-size:17px;font-weight:700;
+  color:var(--ink);margin-bottom:14px;padding-bottom:10px;
+  border-bottom:1px solid var(--line);
+}
+.section p,.section li{
+  font-size:14px;color:var(--ink-dim);line-height:1.8;
+}
+.section p+p{margin-top:10px;}
+.section ul,.section ol{padding-left:20px;margin-top:10px;}
+.section li{margin-bottom:6px;}
+.section strong{color:var(--ink);}
+.section a{color:var(--purple-bright);text-decoration:none;transition:.2s;}
+.section a:hover{color:var(--magenta-bright);}
+code{
+  font-family:var(--font-mono);font-size:12px;
+  background:rgba(157,77,255,.1);color:var(--purple-bright);
+  padding:2px 6px;border-radius:4px;
+}
+
+/* SUBSECTION */
+.subsection{margin-top:20px;}
+.subsection-title{
+  font-size:14px;font-weight:600;color:var(--ink);margin-bottom:8px;
+}
+
+/* TABLE */
+.table-wrap{overflow-x:auto;margin-top:16px;}
+table{width:100%;border-collapse:collapse;font-size:13px;}
+th{
+  text-align:left;padding:10px 12px;
+  background:rgba(157,77,255,.07);
+  color:var(--ink);font-family:var(--font-mono);font-size:11px;
+  letter-spacing:.08em;text-transform:uppercase;
+  border:1px solid var(--line);
+}
+td{
+  padding:10px 12px;color:var(--ink-dim);
+  border:1px solid var(--line);vertical-align:top;line-height:1.6;
+}
+
+/* CONTACT CARD */
+.contact-card{
+  margin-top:16px;
+  background:rgba(157,77,255,.05);
+  border:1px solid var(--line);border-radius:12px;
+  padding:20px 24px;font-size:14px;line-height:1.9;color:var(--ink-dim);
+}
+.contact-card strong{color:var(--ink);}
+.contact-card a{color:var(--purple-bright);text-decoration:none;}
+.contact-card a:hover{color:var(--magenta-bright);}
+
+/* FOOTER */
+footer{
+  position:relative;z-index:5;padding:40px 6vw;
+  display:flex;justify-content:space-between;align-items:center;
+  border-top:1px solid rgba(157,77,255,.1);
+  font-family:var(--font-mono);font-size:11.5px;
+  letter-spacing:.1em;color:var(--ink-faint);
+  flex-wrap:wrap;gap:14px;margin-top:60px;
+}
+footer a{color:var(--ink-dim);text-decoration:none;}
+footer a:hover{color:var(--magenta-bright);}
+
+@media(max-width:640px){
+  main{padding:100px 18px 60px;}
+  .page-title{font-size:26px;}
+  footer{flex-direction:column;align-items:flex-start;gap:10px;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="brand" href="/">
+    Engram<span class="grad">AD</span>
+  </a>
+  <a class="nav-back" href="/">← Volver al inicio</a>
+</nav>
+
+<main>
+
+  <p class="page-label">Legal · Privacidad</p>
+  <h1 class="page-title">Política de Privacidad</h1>
+  <p class="page-subtitle">
+    En <strong>EngramAD</strong> nos tomamos en serio la protección de tus datos.
+    Esta política explica qué información recopilamos, cómo la usamos y qué derechos tienes sobre ella.
+    Al utilizar nuestra plataforma, aceptas los términos aquí descritos.
+  </p>
+  <p style="margin-top:12px;font-family:var(--font-mono);font-size:11px;color:var(--ink-faint);letter-spacing:.08em;">
+    ÚLTIMA ACTUALIZACIÓN: 5 DE JULIO DE 2025
+  </p>
+
+  <hr class="divider">
+
+  <!-- 1 -->
+  <div class="section">
+    <h2 class="section-title">1. Responsable del Tratamiento</h2>
+    <p>
+      El responsable del tratamiento de tus datos personales es <strong>EngramAD</strong>,
+      plataforma de gestión de campañas publicitarias para el sector inmobiliario.
+    </p>
+    <p>
+      Para cualquier consulta relacionada con privacidad, contacta en:
+      <a href="mailto:noelbatistan8@gmail.com">noelbatistan8@gmail.com</a>
+    </p>
+  </div>
+
+  <!-- 2 -->
+  <div class="section">
+    <h2 class="section-title">2. Datos que Recopilamos</h2>
+
+    <div class="subsection">
+      <p class="subsection-title">2.1 Datos de tu cuenta de Facebook (al autenticarte)</p>
+      <ul>
+        <li><strong>Identificador de usuario de Facebook</strong> (ID numérico único)</li>
+        <li><strong>Nombre</strong> asociado a tu perfil de Facebook</li>
+        <li><strong>Token de acceso a Meta Ads</strong> — credencial temporal que nos permite gestionar campañas en tu nombre. Se almacena en una cookie segura (httpOnly) y expira en aproximadamente 60 días.</li>
+      </ul>
+    </div>
+
+    <div class="subsection">
+      <p class="subsection-title">2.2 Datos de perfil en nuestra plataforma</p>
+      <ul>
+        <li>Estado de tu cuenta (activa, pendiente, inactiva, vencida)</li>
+        <li>Plan contratado</li>
+        <li>Fecha de creación y último acceso</li>
+        <li>Fecha de vencimiento del acceso</li>
+        <li>Notas administrativas internas (visibles solo para el administrador)</li>
+      </ul>
+    </div>
+
+    <div class="subsection">
+      <p class="subsection-title">2.3 Datos del inmueble al crear campañas</p>
+      <ul>
+        <li>Tipo de propiedad y características (habitaciones, precio, amenidades)</li>
+        <li>Ubicación geográfica del inmueble y segmentación objetivo</li>
+        <li>Presupuesto diario de campaña</li>
+        <li>Activos creativos (imágenes o videos) — subidos directamente a Meta, no almacenados en nuestros servidores</li>
+      </ul>
+    </div>
+
+    <div class="subsection">
+      <p class="subsection-title">2.4 Datos de rendimiento de campañas (vía Meta)</p>
+      <p>
+        Accedemos a datos históricos de tus campañas en Meta Ads (gasto, impresiones, leads,
+        segmentaciones) con el fin de mejorar las recomendaciones de nuestra inteligencia artificial.
+        Estos datos se obtienen a través de la API oficial de Meta y no se comparten con terceros
+        ajenos a la prestación del servicio.
+      </p>
+    </div>
+
+    <div class="subsection">
+      <p class="subsection-title">2.5 Lo que NO recopilamos</p>
+      <ul>
+        <li>No recopilamos contraseñas de Facebook ni credenciales de inicio de sesión</li>
+        <li>No instalamos píxeles de rastreo ni herramientas de analítica de terceros (Google Analytics, Mixpanel, etc.)</li>
+        <li>No procesamos pagos con tarjeta ni datos financieros directos</li>
+        <li>No recopilamos datos de menores de edad</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="section">
+    <h2 class="section-title">3. Finalidad y Base Legal del Tratamiento</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Finalidad</th>
+            <th>Base legal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Autenticación y gestión de acceso a la plataforma</td>
+            <td>Ejecución del contrato / consentimiento</td>
+          </tr>
+          <tr>
+            <td>Creación y gestión de campañas en Meta Ads en tu nombre</td>
+            <td>Ejecución del contrato</td>
+          </tr>
+          <tr>
+            <td>Análisis de rendimiento de campañas para mejorar recomendaciones IA</td>
+            <td>Interés legítimo</td>
+          </tr>
+          <tr>
+            <td>Comunicación sobre tu cuenta (estado, vencimiento, soporte)</td>
+            <td>Ejecución del contrato</td>
+          </tr>
+          <tr>
+            <td>Cumplimiento de obligaciones legales</td>
+            <td>Obligación legal</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="section">
+    <h2 class="section-title">4. Servicios de Terceros</h2>
+    <p>Para prestar el servicio, EngramAD trabaja con los siguientes proveedores:</p>
+
+    <div class="subsection">
+      <p class="subsection-title">4.1 Meta (Facebook / Instagram)</p>
+      <p>
+        Utilizamos la API oficial de Meta (Graph API v21.0) para crear y gestionar campañas
+        publicitarias en tu nombre. Al autenticarte, otorgas a EngramAD los permisos necesarios
+        (<em>ads_management, ads_read, pages_manage_ads, business_management</em>).
+        El tratamiento de datos por Meta está sujeto a su
+        <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">Política de Privacidad</a>.
+      </p>
+    </div>
+
+    <div class="subsection">
+      <p class="subsection-title">4.2 Anthropic (Claude AI)</p>
+      <p>
+        Usamos el modelo de inteligencia artificial Claude (Anthropic) para generar textos
+        publicitarios y recomendaciones de estrategia. Solo se envían características del inmueble y
+        datos anonimizados de rendimiento. No se transmiten nombres ni identificadores personales de
+        usuarios finales. Más info en la
+        <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">política de privacidad de Anthropic</a>.
+      </p>
+    </div>
+
+    <div class="subsection">
+      <p class="subsection-title">4.3 Supabase</p>
+      <p>
+        Nuestra base de datos está alojada en Supabase (PostgreSQL en la nube).
+        Los datos de perfil están protegidos mediante autenticación y Row Level Security (RLS).
+        Supabase actúa como encargado del tratamiento bajo acuerdo DPA. Consulta la
+        <a href="https://supabase.com/privacy" target="_blank" rel="noopener">política de privacidad de Supabase</a>.
+      </p>
+    </div>
+
+    <p style="margin-top:16px;font-size:13px;color:var(--ink-faint);">
+      No vendemos, alquilamos ni cedemos tus datos personales a terceros con fines comerciales propios.
+    </p>
+  </div>
+
+  <!-- 5 -->
+  <div class="section">
+    <h2 class="section-title">5. Cookies</h2>
+    <p>Usamos únicamente cookies estrictamente necesarias para el funcionamiento de la plataforma:</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Cookie</th>
+            <th>Tipo</th>
+            <th>Finalidad</th>
+            <th>Duración</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>fb_access_token</code></td>
+            <td>httpOnly · Secure</td>
+            <td>Autenticación con Meta Ads API</td>
+            <td>~60 días</td>
+          </tr>
+          <tr>
+            <td><code>fb_user_id</code></td>
+            <td>httpOnly · Secure</td>
+            <td>Identificación de sesión</td>
+            <td>~60 días</td>
+          </tr>
+          <tr>
+            <td><code>fb_user_name</code></td>
+            <td>Secure</td>
+            <td>Mostrar nombre en la interfaz</td>
+            <td>~60 días</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:12px;font-size:13px;color:var(--ink-faint);">
+      No se usan cookies de rastreo publicitario ni analítica de terceros.
+      Puedes eliminarlas cerrando sesión o borrando las cookies de tu navegador.
+    </p>
+  </div>
+
+  <!-- 6 -->
+  <div class="section">
+    <h2 class="section-title">6. Retención de Datos</h2>
+    <ul>
+      <li><strong>Cookies de sesión:</strong> expiran a los ~60 días o al cerrar sesión manualmente.</li>
+      <li><strong>Perfil de usuario:</strong> se conserva mientras la cuenta esté activa o hasta que solicites su eliminación. Las cuentas inactivas pueden eliminarse tras 12 meses de inactividad.</li>
+      <li><strong>Datos de campañas y rendimiento:</strong> conservados para mantener el historial del motor IA. Puedes solicitar su eliminación en cualquier momento.</li>
+      <li><strong>Registros del sistema:</strong> eliminados automáticamente tras 30 días.</li>
+    </ul>
+  </div>
+
+  <!-- 7 -->
+  <div class="section">
+    <h2 class="section-title">7. Tus Derechos</h2>
+    <p>Dependiendo de tu lugar de residencia, tienes los siguientes derechos sobre tus datos:</p>
+    <ul>
+      <li><strong>Acceso:</strong> solicitar una copia de los datos que tenemos sobre ti.</li>
+      <li><strong>Rectificación:</strong> corregir datos inexactos o incompletos.</li>
+      <li><strong>Supresión ("derecho al olvido"):</strong> solicitar la eliminación de tus datos.</li>
+      <li><strong>Portabilidad:</strong> recibir tus datos en formato legible por máquina.</li>
+      <li><strong>Oposición y limitación:</strong> oponerte o limitar ciertos tratamientos.</li>
+      <li><strong>Revocación del consentimiento:</strong> puedes retirar los permisos concedidos a EngramAD desde la configuración de tu cuenta de Facebook en cualquier momento.</li>
+    </ul>
+    <p style="margin-top:14px;">
+      Para ejercer cualquiera de estos derechos, escribe a:
+      <a href="mailto:noelbatistan8@gmail.com">noelbatistan8@gmail.com</a>.
+      Responderemos en un plazo máximo de 30 días.
+    </p>
+    <p style="margin-top:10px;font-size:13px;color:var(--ink-faint);">
+      Si resides en la Unión Europea (incluida España), puedes presentar reclamación ante la
+      Agencia Española de Protección de Datos (AEPD) en
+      <a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a>.
+    </p>
+  </div>
+
+  <!-- 8 -->
+  <div class="section">
+    <h2 class="section-title">8. Transferencias Internacionales de Datos</h2>
+    <p>
+      Operamos en República Dominicana, Puerto Rico, España, Canadá y Estados Unidos. Tus datos pueden
+      ser procesados en servidores fuera de tu país de residencia. Todos nuestros proveedores cuentan
+      con garantías adecuadas (cláusulas contractuales estándar o equivalentes) conforme a la normativa
+      aplicable.
+    </p>
+  </div>
+
+  <!-- 9 -->
+  <div class="section">
+    <h2 class="section-title">9. Seguridad</h2>
+    <p>Implementamos las siguientes medidas para proteger tus datos:</p>
+    <ul>
+      <li>Tokens almacenados exclusivamente en cookies <code>httpOnly</code> (no accesibles desde JavaScript)</li>
+      <li>Comunicaciones cifradas mediante HTTPS/TLS</li>
+      <li>Acceso a la base de datos restringido mediante Row Level Security (RLS)</li>
+      <li>Acceso administrativo limitado a un único usuario verificado</li>
+      <li>Sin almacenamiento de contraseñas (autenticación delegada a Facebook OAuth)</li>
+    </ul>
+    <p style="margin-top:12px;font-size:13px;color:var(--ink-faint);">
+      Ningún sistema es 100% seguro. Ante cualquier brecha que afecte a tus datos, te notificaremos
+      conforme a la normativa aplicable.
+    </p>
+  </div>
+
+  <!-- 10 -->
+  <div class="section">
+    <h2 class="section-title">10. Menores de Edad</h2>
+    <p>
+      EngramAD es una plataforma profesional dirigida exclusivamente a agentes inmobiliarios y empresas
+      del sector. No recopilamos datos de personas menores de 18 años. Si tienes conocimiento de que un
+      menor ha proporcionado datos, contáctanos para proceder a su eliminación.
+    </p>
+  </div>
+
+  <!-- 11 -->
+  <div class="section">
+    <h2 class="section-title">11. Cambios en esta Política</h2>
+    <p>
+      Podemos actualizar esta política ocasionalmente. Cuando lo hagamos, actualizaremos la fecha de
+      "última actualización" al inicio del documento. Si los cambios son materiales, te notificaremos
+      a través de la plataforma. El uso continuado de EngramAD tras la publicación de cambios implica
+      tu aceptación de la política actualizada.
+    </p>
+  </div>
+
+  <!-- 12 -->
+  <div class="section">
+    <h2 class="section-title">12. Contacto</h2>
+    <p>Para cualquier pregunta, solicitud o reclamación relacionada con esta Política de Privacidad:</p>
+    <div class="contact-card">
+      <strong>EngramAD</strong><br>
+      Correo electrónico: <a href="mailto:noelbatistan8@gmail.com">noelbatistan8@gmail.com</a>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <a href="/">© 2025 EngramAD</a>
+  <a href="/privacidad.html">Política de privacidad</a>
+  <a href="#">Términos de servicio</a>
+  <a href="mailto:noelbatistan8@gmail.com">Contacto</a>
+</footer>
+
+</body>
+</html>
