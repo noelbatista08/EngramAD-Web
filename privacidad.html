@@ -240,13 +240,14 @@ footer a:hover{color:var(--magenta-bright);}
         Estos datos se utilizan exclusivamente para los siguientes fines:
       </p>
       <ul>
-        <li><strong>Recomendaciones personalizadas:</strong> analizar el rendimiento de tus propias campañas para sugerirte audiencias y presupuestos optimizados.</li>
-        <li><strong>Entrenamiento del motor de IA:</strong> los datos de rendimiento de todos los usuarios de la plataforma se agregan y anonimizan para mejorar el modelo de recomendaciones de EngramAD. Este proceso elimina cualquier identificador personal o de cuenta antes de ser procesado. Ningún dato individual es expuesto a otros usuarios.</li>
+        <li><strong>Recomendaciones personalizadas por sesión:</strong> tus datos históricos de rendimiento se usan como contexto de referencia en el momento de generar una recomendación, permitiendo al sistema sugerirte audiencias y presupuestos alineados con el desempeño real de tus campañas anteriores.</li>
+        <li><strong>Benchmarks de rendimiento:</strong> métricas de campañas previas (coste por lead, alcance, segmentaciones efectivas) se almacenan de forma anonimizada como referencia de rendimiento del sector inmobiliario. Esta información se usa como contexto comparativo durante la generación de recomendaciones, no para modificar ni entrenar ningún modelo de inteligencia artificial.</li>
       </ul>
       <p>
-        Al usar EngramAD, aceptas que tus datos de rendimiento de campaña (sin información de identificación personal) puedan ser incluidos en este proceso de mejora colectiva del sistema.
-        Puedes solicitar la exclusión de este procesamiento en cualquier momento escribiendo a
-        <a href="mailto:contacto@engramad.com">contacto@engramad.com</a>.
+        EngramAD utiliza un modelo de IA externo (Claude, de Anthropic) al que envía los datos
+        relevantes como contexto en cada sesión de trabajo. <strong>Ningún dato obtenido a través
+        de la API de Meta es utilizado para entrenar, ajustar o modificar modelos de inteligencia
+        artificial</strong>, en cumplimiento de las Condiciones de la Plataforma de Meta.
       </p>
     </div>
 
@@ -281,7 +282,7 @@ footer a:hover{color:var(--magenta-bright);}
             <td>Ejecución del contrato</td>
           </tr>
           <tr>
-            <td>Análisis de rendimiento de campañas para mejorar recomendaciones IA</td>
+            <td>Análisis de rendimiento de campañas como contexto de referencia para recomendaciones</td>
             <td>Interés legítimo</td>
           </tr>
           <tr>
