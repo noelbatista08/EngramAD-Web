@@ -236,9 +236,17 @@ footer a:hover{color:var(--magenta-bright);}
       <p class="subsection-title">2.4 Datos de rendimiento de campañas (vía Meta)</p>
       <p>
         Accedemos a datos históricos de tus campañas en Meta Ads (gasto, impresiones, leads,
-        segmentaciones) con el fin de mejorar las recomendaciones de nuestra inteligencia artificial.
-        Estos datos se obtienen a través de la API oficial de Meta y no se comparten con terceros
-        ajenos a la prestación del servicio.
+        segmentaciones) mediante el permiso <code>ads_read</code> de la API oficial de Meta.
+        Estos datos se utilizan exclusivamente para los siguientes fines:
+      </p>
+      <ul>
+        <li><strong>Recomendaciones personalizadas:</strong> analizar el rendimiento de tus propias campañas para sugerirte audiencias y presupuestos optimizados.</li>
+        <li><strong>Entrenamiento del motor de IA:</strong> los datos de rendimiento de todos los usuarios de la plataforma se agregan y anonimizan para mejorar el modelo de recomendaciones de EngramAD. Este proceso elimina cualquier identificador personal o de cuenta antes de ser procesado. Ningún dato individual es expuesto a otros usuarios.</li>
+      </ul>
+      <p>
+        Al usar EngramAD, aceptas que tus datos de rendimiento de campaña (sin información de identificación personal) puedan ser incluidos en este proceso de mejora colectiva del sistema.
+        Puedes solicitar la exclusión de este procesamiento en cualquier momento escribiendo a
+        <a href="mailto:contacto@engramad.com">contacto@engramad.com</a>.
       </p>
     </div>
 
@@ -302,9 +310,21 @@ footer a:hover{color:var(--magenta-bright);}
       <p class="subsection-title">4.1 Meta (Facebook / Instagram)</p>
       <p>
         Utilizamos la API oficial de Meta (Graph API v21.0) para crear y gestionar campañas
-        publicitarias en tu nombre. Al autenticarte, otorgas a EngramAD los permisos necesarios
-        (<em>ads_management, ads_read, pages_manage_ads, business_management</em>).
-        El tratamiento de datos por Meta está sujeto a su
+        publicitarias en tu nombre. Al autenticarte con Facebook, otorgas a EngramAD los siguientes
+        permisos y los usamos exclusivamente para los fines indicados:
+      </p>
+      <ul>
+        <li><code>ads_management</code> — crear, editar y publicar campañas, conjuntos de anuncios y anuncios en tu cuenta publicitaria de Meta.</li>
+        <li><code>ads_read</code> — leer datos históricos de rendimiento de tus campañas para generar recomendaciones de audiencia y presupuesto.</li>
+        <li><code>pages_show_list</code> — listar tus Páginas de Facebook para que puedas seleccionar cuál asociar a cada campaña.</li>
+        <li><code>pages_manage_ads</code> — gestionar anuncios vinculados a tus Páginas de Facebook.</li>
+        <li><code>business_management</code> — acceder a las Páginas y cuentas publicitarias asociadas a tu Business Manager para presentarlas como opciones durante la creación de campañas.</li>
+        <li><code>public_profile</code> — obtener tu nombre e ID de Facebook para identificar tu sesión en la plataforma.</li>
+      </ul>
+      <p>
+        EngramAD no almacena ni redistribuye los datos obtenidos a través de estos permisos más allá
+        de lo estrictamente necesario para prestar el servicio descrito. El tratamiento de datos por
+        Meta está sujeto a su
         <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">Política de Privacidad</a>.
       </p>
     </div>
