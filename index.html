@@ -156,21 +156,6 @@ h2{font-size:clamp(2rem,4.4vw,3.6rem);margin-bottom:22px}
 .log-line .hl{color:var(--magenta-bright)}
 .log-line .hp{color:var(--purple-bright)}
 
-/* ---------- Sección: Resultados ---------- */
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:8vh;
-  background:linear-gradient(90deg,transparent,rgba(157,77,255,.25),rgba(214,31,92,.25),transparent)}
-@media(max-width:900px){.stats-grid{grid-template-columns:repeat(2,1fr)}}
-.stat{background:var(--space);padding:44px 30px;position:relative;overflow:hidden}
-.stat .ring{position:absolute;top:24px;right:24px;width:44px;height:44px}
-.stat .ring circle{fill:none;stroke-width:2.5}
-.stat .ring .bg{stroke:rgba(157,77,255,.15)}
-.stat .ring .fg{stroke:url(#ringGrad);stroke-linecap:round;stroke-dasharray:113;stroke-dashoffset:113}
-.stat .num{font-family:var(--font-display);font-weight:800;font-size:clamp(2.4rem,4.6vw,3.8rem);line-height:1;
-  background:linear-gradient(120deg,#aab8ff,var(--purple-bright) 45%,var(--magenta-bright));-webkit-background-clip:text;background-clip:text;color:transparent}
-.stat .lbl{font-family:var(--font-mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-dim);margin-top:14px}
-.stat .spark{margin-top:22px;width:100%;height:34px;overflow:visible}
-.stat .spark path{fill:none;stroke:url(#sparkGrad);stroke-width:2;stroke-linecap:round}
-
 /* ---------- Sección final ---------- */
 #final{min-height:120vh;display:flex;align-items:center;text-align:center}
 #final .shell{max-width:880px;display:flex;flex-direction:column;align-items:center}
@@ -325,49 +310,6 @@ footer a:hover{color:var(--magenta-bright)}
         <div class="panel">
           <div class="panel-tag"><span class="live-dot"></span> DECISIONES DEL SISTEMA</div>
           <div id="sim-log"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- RESULTADOS -->
-  <section id="resultados">
-    <div class="shell">
-      <div class="eyebrow reveal">Resultados</div>
-      <h2 class="reveal">Lo que pasa cuando<br><span class="grad-text">la red trabaja sola</span></h2>
-      <p class="lead reveal" style="max-width:640px;margin-top:14px">Cifras reales de campañas activas en nuestro ecosistema. La red no descansa, aprende, ajusta y entrega — todos los días.</p>
-
-      <svg width="0" height="0" style="position:absolute">
-        <defs>
-          <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#9d4dff"/><stop offset="100%" stop-color="#ff3d7f"/>
-          </linearGradient>
-          <linearGradient id="sparkGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#3a4fb5"/><stop offset="55%" stop-color="#9d4dff"/><stop offset="100%" stop-color="#ff3d7f"/>
-          </linearGradient>
-        </defs>
-      </svg>
-
-      <div class="stats-grid">
-        <div class="stat reveal" data-target="128400" data-suffix="+" data-fill="86">
-          <svg class="ring" viewBox="0 0 40 40"><circle class="bg" cx="20" cy="20" r="18"/><circle class="fg" cx="20" cy="20" r="18"/></svg>
-          <div class="num">0</div><div class="lbl">Leads generados</div>
-          <svg class="spark" viewBox="0 0 120 34"><path d="M0 30 L15 26 L30 27 L45 20 L60 22 L75 13 L90 14 L105 6 L120 3"/></svg>
-        </div>
-        <div class="stat reveal" data-target="3200" data-suffix="+" data-fill="74">
-          <svg class="ring" viewBox="0 0 40 40"><circle class="bg" cx="20" cy="20" r="18"/><circle class="fg" cx="20" cy="20" r="18"/></svg>
-          <div class="num">0</div><div class="lbl">Procesos automatizados</div>
-          <svg class="spark" viewBox="0 0 120 34"><path d="M0 31 L15 29 L30 24 L45 25 L60 18 L75 16 L90 10 L105 9 L120 4"/></svg>
-        </div>
-        <div class="stat reveal" data-target="9700" data-suffix="+" data-fill="92">
-          <svg class="ring" viewBox="0 0 40 40"><circle class="bg" cx="20" cy="20" r="18"/><circle class="fg" cx="20" cy="20" r="18"/></svg>
-          <div class="num">0</div><div class="lbl">Campañas optimizadas</div>
-          <svg class="spark" viewBox="0 0 120 34"><path d="M0 32 L15 27 L30 28 L45 21 L60 15 L75 17 L90 9 L105 7 L120 2"/></svg>
-        </div>
-        <div class="stat reveal" data-target="412000" data-suffix="+" data-fill="80">
-          <svg class="ring" viewBox="0 0 40 40"><circle class="bg" cx="20" cy="20" r="18"/><circle class="fg" cx="20" cy="20" r="18"/></svg>
-          <div class="num">0</div><div class="lbl">Horas ahorradas</div>
-          <svg class="spark" viewBox="0 0 120 34"><path d="M0 30 L15 28 L30 22 L45 23 L60 16 L75 12 L90 13 L105 5 L120 4"/></svg>
         </div>
       </div>
     </div>
@@ -988,22 +930,6 @@ gsap.to('#hero .shell, #scroll-hint',{opacity:0, y:-60, ease:'none',
     setInterval(pushLog, 2600);
   }});
 })();
-
-/* ---------- 10 · RESULTADOS: contadores premium ---------- */
-document.querySelectorAll('.stat').forEach(el=>{
-  const target=+el.dataset.target, suffix=el.dataset.suffix||'';
-  const num=el.querySelector('.num'), ringFg=el.querySelector('.ring .fg');
-  const spark=el.querySelector('.spark path');
-  const sl=spark.getTotalLength();
-  spark.style.strokeDasharray=sl; spark.style.strokeDashoffset=sl;
-  ScrollTrigger.create({trigger:el, start:'top 82%', once:true, onEnter:()=>{
-    const o={v:0};
-    gsap.to(o,{v:target, duration:2.4, ease:'power3.out', onUpdate:()=>{
-      num.textContent = Math.round(o.v).toLocaleString('es') + suffix; }});
-    gsap.to(ringFg,{strokeDashoffset:113-(113*(+el.dataset.fill)/100), duration:2, ease:'power3.out', delay:.2});
-    gsap.to(spark,{strokeDashoffset:0, duration:2.2, ease:'power2.inOut', delay:.3});
-  }});
-});
 
 </script>
 </body>
