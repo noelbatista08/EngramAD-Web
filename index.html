@@ -77,7 +77,9 @@ h2{font-size:clamp(2rem,4.4vw,3.6rem);margin-bottom:22px}
 
 /* ---------- Hero ---------- */
 #hero{min-height:100vh;display:flex;align-items:center;padding-top:10vh}
-#hero .shell{max-width:1000px}
+#hero .shell{max-width:1000px;background:rgba(255,255,255,.86);backdrop-filter:blur(10px);
+  border-radius:32px;padding:56px 64px;box-shadow:0 30px 80px rgba(0,0,0,.05)}
+@media(max-width:760px){ #hero .shell{padding:36px 24px;border-radius:24px} }
 .hero-logo{width:clamp(84px,9vw,120px);height:clamp(84px,9vw,120px);object-fit:cover;object-position:left center;
   margin-bottom:34px;opacity:0;filter:drop-shadow(0 0 24px rgba(214,31,92,.3))}
 #hero h1{opacity:0}
@@ -619,7 +621,7 @@ function frame(){
     sp[o+3]=pos[s.b*3]; sp[o+4]=pos[s.b*3+1]; sp[o+5]=pos[s.b*3+2];
   });
   synGeo.attributes.position.needsUpdate = true;
-  synLines.material.opacity = .5;
+  synLines.material.opacity = .22;
 
   /* cámara: parallax sutil + respiración */
   camera.position.x += (mouse.x*4 - camera.position.x)*.03;
@@ -639,14 +641,14 @@ addEventListener('resize', ()=>{
 /* ---------- 4 · INTRO CINEMATOGRÁFICA ---------- */
 const introTL = gsap.timeline({defaults:{ease:'power3.out'}});
 if(REDUCED){
-  gsap.set([points.material, lines.material, pulses.material], {opacity:.9});
+  gsap.set([points.material, lines.material, pulses.material], {opacity:.35});
   gsap.set(['#hero-logo','#hero-title','#hero-lead','#hero-actions','#scroll-hint'],{opacity:1});
   document.getElementById('nav').classList.add('visible');
 }else{
   introTL
-    .to(points.material, {opacity:.95, duration:2.6, ease:'power2.inOut'})
-    .to(lines.material,  {opacity:.55, duration:2.4, ease:'power2.inOut'}, '-=1.8')
-    .to(pulses.material, {opacity:.9,  duration:1.6}, '-=1.4')
+    .to(points.material, {opacity:.38, duration:2.6, ease:'power2.inOut'})
+    .to(lines.material,  {opacity:.2,  duration:2.4, ease:'power2.inOut'}, '-=1.8')
+    .to(pulses.material, {opacity:.35, duration:1.6}, '-=1.4')
     .to(camera.position, {z:44, duration:3.4, ease:'power2.inOut'}, 0)
     .to('#hero-logo', {opacity:1, duration:1.2}, '-=1.6')
     .to('#hero-title',{opacity:1, y:0, duration:1.1, startAt:{y:30}}, '-=.9')
@@ -700,9 +702,9 @@ ScrollTrigger.create({
   trigger:'#final', start:'top 55%', end:'top -10%', scrub:1.1,
   onUpdate:self=>{
     const fade = 1 - self.progress;          // 1 -> 0
-    points.material.opacity = .95 * fade;
-    lines.material.opacity  = .55 * fade;
-    pulses.material.opacity = .9  * fade;
+    points.material.opacity = .38 * fade;
+    lines.material.opacity  = .2  * fade;
+    pulses.material.opacity = .35 * fade;
     const bg = document.getElementById('neural-bg');
     if(bg) bg.style.opacity = (0.25 + 0.75 * fade).toFixed(3);
   }
